@@ -7,8 +7,8 @@ namespace TraineeShop.Models
 {
     public class Company
     {
-        public Guid id { get; set; }
-        public string name { get; set; }
-        public string country { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Country { get; set; }
     }
 }

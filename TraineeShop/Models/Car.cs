@@ -7,10 +7,10 @@ namespace TraineeShop.Models
 {
     public class Car
     {
-        public Guid id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public decimal? price { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal? Price { get; set; }
         //public Company company { get; set; }
        
 
