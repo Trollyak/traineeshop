@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TraineeShop.Models;
 
-namespace TraineeShop.Controllers
-{
+namespace TraineeShop.Controllers { 
+
     public class HomeController : Controller
     {
         public IActionResult Index()
@@ -17,6 +17,7 @@ namespace TraineeShop.Controllers
 
         public IActionResult Privacy()
         {
+            
             return View();
         }
 

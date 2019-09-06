@@ -1,0 +1,15 @@
+﻿@model Company
+@{
+    ViewData["Title"] = "AddCompany";
+}
+
+<h1>AddCompany</h1>
+<form method="post">
+    <p>Введите имя</p>
+    <input type="text" class="form-text form-control" asp-for="Name" />
+    <p>Введите страну</p>
+    <input type="text" class="form-text form-control" asp-for="Country" />
+    <br/>
+    <button class="btn btn-success">Отправить</button>
+</form>
+

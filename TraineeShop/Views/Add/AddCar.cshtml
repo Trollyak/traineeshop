@@ -1,0 +1,18 @@
+﻿@model Car;
+@{
+    ViewData["Title"] = "AddCar";
+}
+
+<h1>Car</h1>
+<form method="post">
+    <p>Имя</p>
+    <input type="text" class="form-control" asp-for="Name" />
+    <p>Описание</p>
+    <input type="text" class="form-control" asp-for="Description"/>
+    <p>Цена</p>
+    <input type="text" class="form-control" asp-for="Price"/>
+    <br/>
+    <button class="btn btn-success">Отправить</button>
+</form>
+
+
