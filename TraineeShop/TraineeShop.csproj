@@ -5,6 +5,17 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="img\**" />
+    <Compile Remove="Views\Css\**" />
+    <Content Remove="img\**" />
+    <Content Remove="Views\Css\**" />
+    <EmbeddedResource Remove="img\**" />
+    <EmbeddedResource Remove="Views\Css\**" />
+    <None Remove="img\**" />
+    <None Remove="Views\Css\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
@@ -14,12 +25,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="img\" />
-    <Folder Include="Views\Css\" />
   </ItemGroup>
 
 
