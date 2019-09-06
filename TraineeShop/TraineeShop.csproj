@@ -18,12 +18,6 @@
 
 
   <ItemGroup>
-    <Folder Include="img\" />
-    <Folder Include="Views\Css\" />
-  </ItemGroup>
-
-
-  <ItemGroup>
     <None Include="wwwroot\css\index.css" />
   </ItemGroup>
 
