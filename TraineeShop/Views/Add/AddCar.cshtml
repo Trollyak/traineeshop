@@ -6,14 +6,27 @@
 
 <h1>Car</h1>
 <form method="post">
-    <p>Имя</p>
-    <input type="text" class="form-control" asp-for="Car.Name" />
-    <p>Цена</p>
-    <select asp-for="Car.Company" asp-items="compan" class="form-control"></select>
-    <p>Описание</p>
-    <input type="text" class="form-control" asp-for="Car.Description" />
-    <p>Цена</p>
-    <input type="text" class="form-control" asp-for="Car.Price" />
+    <div class="form-group">
+        <p>Имя</p>
+        <input type="text" class="form-control" asp-for="Car.Name" />
+        <span asp-validation-for="Car.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <p>Компания</p>
+        <select asp-for="Car.Company" asp-items="compan" class="form-control"></select>
+        <span asp-validation-for="Car.Company" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <p>Описание</p>
+        <input type="text" class="form-control" asp-for="Car.Description" />
+        <span asp-validation-for="Car.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <p>Цена</p>
+        <input type="text" class="form-control" asp-for="Car.Price" />
+        <span asp-validation-for="Car.Price" class="text-danger"></span>
+    </div>
+
 
     <br />
     <button class="btn btn-success">Отправить</button>

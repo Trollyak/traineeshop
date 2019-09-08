@@ -28,11 +28,15 @@ namespace TraineeShop.Controllers
         [HttpPost]
         public ActionResult AddCar(Car car)
         {
-            return View();
+            if (ModelState.IsValid)
+                return Content("<h1>KeK</h1>");
+            else
+                return View(GetCarViewModel(car));
         }
-        private CarViewModel GetCarViewModel() => new CarViewModel
+        private CarViewModel GetCarViewModel(Car car = null) => new CarViewModel
         {
-            Car = new Car(),
+            
+            Car = car ?? new Car(),
             Companies = new List<Company>
             {
                 new Company{Id = Guid.NewGuid(), Name = "Tesla", Country = "USA"},
