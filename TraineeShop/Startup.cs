@@ -33,6 +33,7 @@ namespace TraineeShop
             });
 
             services.AddTransient<IValidator<Car>, CarValidation>();
+            services.AddTransient<IValidator<Company>, CompanyValidation>();
             services
                 .AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)

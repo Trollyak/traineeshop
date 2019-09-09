@@ -18,7 +18,10 @@ namespace TraineeShop.Controllers
         [HttpPost]
         public ActionResult AddCompany(Company company)
         {
-            return View();
+            if (ModelState.IsValid)
+                return Content(company.Name);
+            else
+                return View();
         }
         public ActionResult AddCar()
         {

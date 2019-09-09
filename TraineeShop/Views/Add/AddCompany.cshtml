@@ -5,11 +5,18 @@
 
 <h1>AddCompany</h1>
 <form method="post">
-    <p>Введите имя</p>
-    <input type="text" class="form-text form-control" asp-for="Name" />
-    <p>Введите страну</p>
-    <input type="text" class="form-text form-control" asp-for="Country" />
-    <br/>
+    <div class="form-group">
+        <p>Имя</p>
+        <input type="text" class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    
+    <div class="form-group">
+        <p>Описание</p>
+        <input type="text" class="form-control" asp-for="Country" />
+        <span asp-validation-for="Country" class="text-danger"></span>
+    </div>
+    <br />
     <button class="btn btn-success">Отправить</button>
 </form>
 
