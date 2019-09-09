@@ -5,11 +5,15 @@ using TraineeShop.Models;
 using TraineeShop.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TraineeShop.Repository;
 
 namespace TraineeShop.Controllers
 {
+    
     public class AddController : Controller
     {
+        IRepository<Car> CarDb = new CarRepository();
+        IRepository<Company> CompanyDb = new CompanyRepository();
         // GET: Add
         public ActionResult AddCompany()
         {
@@ -19,9 +23,12 @@ namespace TraineeShop.Controllers
         public ActionResult AddCompany(Company company)
         {
             if (ModelState.IsValid)
-                return Content(company.Name);
-            else
+            {
+                CompanyDb.Create(company);
                 return View();
+            }
+            else
+                return View(company);
         }
         public ActionResult AddCar()
         {
@@ -32,7 +39,10 @@ namespace TraineeShop.Controllers
         public ActionResult AddCar(Car car)
         {
             if (ModelState.IsValid)
-                return Content("<h1>KeK</h1>");
+            {
+                CarDb.Create(car);
+                return View(GetCarViewModel(car));
+            }
             else
                 return View(GetCarViewModel(car));
         }
@@ -40,12 +50,7 @@ namespace TraineeShop.Controllers
         {
             
             Car = car ?? new Car(),
-            Companies = new List<Company>
-            {
-                new Company{Id = Guid.NewGuid(), Name = "Tesla", Country = "USA"},
-                new Company{Id = Guid.NewGuid(), Name = "Lada", Country = "Russia"},
-                new Company{Id = Guid.NewGuid(), Name = "Mercedes-Benz", Country = "Deutschland" }
-            }
+            Companies = new List<Company>(CompanyDb.GetAll())
         };
 
     }
