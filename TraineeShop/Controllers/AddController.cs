@@ -41,7 +41,7 @@ namespace TraineeShop.Controllers
             if (ModelState.IsValid)
             {
                 CarDb.Create(car);
-                return View(GetCarViewModel(car));
+                return View(GetCarViewModel());
             }
             else
                 return View(GetCarViewModel(car));
