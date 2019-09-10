@@ -7,13 +7,56 @@
 
   <ItemGroup>
     <Compile Remove="img\**" />
-    <Compile Remove="Views\Css\**" />
+    <Compile Remove="Web\Views\Css\**" />
     <Content Remove="img\**" />
-    <Content Remove="Views\Css\**" />
+    <Content Remove="Web\Views\Css\**" />
     <EmbeddedResource Remove="img\**" />
-    <EmbeddedResource Remove="Views\Css\**" />
+    <EmbeddedResource Remove="Web\Views\Css\**" />
     <None Remove="img\**" />
-    <None Remove="Views\Css\**" />
+    <None Remove="Web\Views\Css\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Web\wwwroot\css\index.css" />
+    <Content Include="Web\wwwroot\favicon.ico" />
+    <Content Include="Web\wwwroot\gelik.jpg" />
+    <Content Include="Web\wwwroot\js\site.js" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="Web\wwwroot\lib\bootstrap\LICENSE" />
+    <Content Include="Web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Web\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="Web\wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Web\wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Web\wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Web\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Web\wwwroot\lib\jquery-validation\LICENSE.md" />
+    <Content Include="Web\wwwroot\lib\jquery\dist\jquery.js" />
+    <Content Include="Web\wwwroot\lib\jquery\dist\jquery.min.js" />
+    <Content Include="Web\wwwroot\lib\jquery\dist\jquery.min.map" />
+    <Content Include="Web\wwwroot\lib\jquery\LICENSE.txt" />
+    <Content Include="Web\wwwroot\logoza_ru.png" />
+    <Content Include="Web\wwwroot\niva.jpg" />
+    <Content Include="Web\wwwroot\tesla.jpg" />
   </ItemGroup>
 
 
@@ -24,20 +67,12 @@
     <PackageReference Include="FluentValidation.AspNetCore" Version="8.4.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
-    <PackageReference Include="Npgsql" Version="4.0.9" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <None Include="wwwroot\css\index.css" />
   </ItemGroup>
 
 </Project>
