@@ -19,6 +19,7 @@ namespace TraineeShop
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+            .UseContentRoot(Directory.GetCurrentDirectory()+"\\Web")
                 .UseStartup<Startup>();
     }
 }
