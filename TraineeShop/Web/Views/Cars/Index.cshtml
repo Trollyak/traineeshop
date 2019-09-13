@@ -1,0 +1,21 @@
+﻿@model List<Car>;
+<style>
+    body {
+        background-color: black;
+    }
+</style>
+@foreach (Car car in Model)
+{
+    <div class="bg-light rounded text-center">
+        <h1>
+            @car.Name
+        </h1>
+        <h2>
+            @car.Price
+        </h2>   
+        <h2>
+            @car.Description
+        </h2>
+    </div>
+    <br />
+}
