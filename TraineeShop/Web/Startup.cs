@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using TraineeShop.Core.DataAccess;
 
 namespace TraineeShop
 {
@@ -38,7 +39,10 @@ namespace TraineeShop
                 .AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddFluentValidation();
-            
+            //var dbConnStr = Configuration.GetConnectionString("DefaultConnection");
+            //InitDB(dbConnStr);
+            //LinqToDB.Data.DataConnection.DefaultSettings = new Linq2DbSettings(dbConnStr);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,4 +71,10 @@ namespace TraineeShop
             });
         }
     }
+    //private void InitDB(string connectionString)
+    //{
+    //    var migrator = new MigratorRunner(connectionString);
+    //    migrator.Run();
+    //}
 }
+

@@ -38,8 +38,11 @@ namespace TraineeShop.Controllers
         [HttpPost]
         public ActionResult AddCar(Car car)
         {
+            
             if (ModelState.IsValid)
             {
+                //var s = (from t in CompanyDb.GetAll() where t.Name == car.Company.Name select t).ToList();
+                //car.Company.Country = s[0].Country;
                 CarDb.Create(car);
                 return View(GetCarViewModel());
             }
