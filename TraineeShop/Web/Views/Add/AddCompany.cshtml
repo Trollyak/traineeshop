@@ -3,16 +3,16 @@
     ViewData["Title"] = "AddCompany";
 }
 
-<h1>AddCompany</h1>
+<h1 class="text-light"  >AddCompany</h1>
 <form method="post">
     <div class="form-group">
-        <p>Имя</p>
+        <p class="text-light">Имя</p>
         <input type="text" class="form-control" asp-for="Name" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     
     <div class="form-group">
-        <p>Страна</p>
+        <p class="text-light">Страна</p>
         <input type="text" class="form-control" asp-for="Country" />
         <span asp-validation-for="Country" class="text-danger"></span>
     </div>

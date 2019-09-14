@@ -4,25 +4,25 @@
     var compan=new SelectList( Model.Companies, "Name", "Name" );
 }
 
-<h1>Car</h1>
+<h1 class="text-light">Car</h1>
 <form method="post">
     <div class="form-group">
-        <p>Имя</p>
-        <input type="text" class="form-control" asp-for="Car.Name" />
+        <p class="text-light">Имя</p>
+        <input type="text" class="form-control text-light" asp-for="Car.Name" />
         <span asp-validation-for="Car.Name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <p>Компания</p>
+        <p class="text-light">Компания</p>
         <select asp-for="Car.Company.Name" asp-items="@compan" class="form-control"></select>
         <span asp-validation-for="Car.Company" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <p>Описание</p>
+        <p class="text-light">Описание</p>
         <input type="text" class="form-control" asp-for="Car.Description" />
         <span asp-validation-for="Car.Description" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <p>Цена</p>
+        <p class="text-light">Цена</p>
         <input type="text" class="form-control" asp-for="Car.Price" />
         <span asp-validation-for="Car.Price" class="text-danger"></span>
     </div>
