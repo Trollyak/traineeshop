@@ -10,7 +10,7 @@ using TraineeShop.DataBase;
 namespace TraineeShop.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20190914120025_Initial")]
+    [Migration("20190914143340_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,8 @@ namespace TraineeShop.Migrations
                     b.Property<string>("Description");
 
                     b.Property<string>("Name");
+
+                    b.Property<string>("Picture");
 
                     b.Property<decimal?>("Price");
 
