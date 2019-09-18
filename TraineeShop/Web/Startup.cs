@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using TraineeShop.Core.DataAccess;
+using TraineeShop.DBUpdate;
 
 namespace TraineeShop
 {
@@ -39,9 +40,9 @@ namespace TraineeShop
                 .AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddFluentValidation();
-            //var dbConnStr = Configuration.GetConnectionString("DefaultConnection");
-            //InitDB(dbConnStr);
-            //LinqToDB.Data.DataConnection.DefaultSettings = new Linq2DbSettings(dbConnStr);
+            var dbConnStr = Configuration.GetConnectionString("DefaultConnection");
+            InitDB(dbConnStr);
+            LinqToDB.Data.DataConnection.DefaultSettings = new Linq2DbSettings(dbConnStr);
 
         }
 
@@ -70,11 +71,12 @@ namespace TraineeShop
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+        private void InitDB(string connectionString)
+        {
+            var migrator = new MigratorRunner(connectionString);
+            migrator.Run();
+        }
     }
-    //private void InitDB(string connectionString)
-    //{
-    //    var migrator = new MigratorRunner(connectionString);
-    //    migrator.Run();
-    //}
+    
 }
 
