@@ -16,5 +16,10 @@ namespace TraineeShop.Web.Controllers
         {
             return View(CarDb.GetAll().ToList());
         }
+        public ActionResult Product(Guid id)
+        {
+            return View(CarDb.Get(id));
+        }
+        
     }
 }

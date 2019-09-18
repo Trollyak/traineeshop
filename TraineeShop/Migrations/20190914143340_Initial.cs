@@ -28,7 +28,8 @@ namespace TraineeShop.Migrations
                     Name = table.Column<string>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     Price = table.Column<decimal>(nullable: true),
-                    CompanyId = table.Column<Guid>(nullable: true)
+                    CompanyId = table.Column<Guid>(nullable: true),
+                    Picture = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

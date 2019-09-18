@@ -30,6 +30,8 @@ namespace TraineeShop.Migrations
 
                     b.Property<string>("Name");
 
+                    b.Property<string>("Picture");
+
                     b.Property<decimal?>("Price");
 
                     b.HasKey("Id");

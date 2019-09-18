@@ -16,7 +16,7 @@ namespace TraineeShop.Repository
         public void Create(Car item)
         {
             db.Cars.Add(item);
-            db.SaveChanges();
+                db.SaveChanges();
         }
 
         public void Delete(Guid id)

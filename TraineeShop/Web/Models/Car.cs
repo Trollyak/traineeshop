@@ -13,6 +13,6 @@ namespace TraineeShop.Models
         public decimal? Price { get; set; }
         public Company Company { get; set; }
        
-
+        public string Picture { get; set; }
     }
 }
