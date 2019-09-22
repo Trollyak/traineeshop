@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using TraineeShop.Models;
 
 namespace TraineeShop.DataBase
@@ -12,7 +14,10 @@ namespace TraineeShop.DataBase
         public DbSet<Company> Companies { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=zxcasdqwe");
+            var builder = new ConfigurationBuilder();
+             
+          var configuration = builder.Build();
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=CarShop;Username=postgres;Password=qwerty23");
         }
 
 

@@ -6,5 +6,6 @@
         <div class="text-light"> Название: @Model.Name</div>
         <div class="text-light">Описание: @Model.Description</div>
         <div class="text-light">Стоимость: @Model.Price</div>
+        <a asp-controller="Cart" asp-action="Buy" asp-route-id="@Model.Id">Добавить в корзину</a>
     </div>
 </p>

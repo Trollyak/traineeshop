@@ -33,7 +33,8 @@ namespace TraineeShop
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            services.AddSession();
+            services.AddDistributedMemoryCache();
             services.AddTransient<IValidator<Car>, CarValidation>();
             services.AddTransient<IValidator<Company>, CompanyValidation>();
             services
@@ -63,7 +64,7 @@ namespace TraineeShop
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
