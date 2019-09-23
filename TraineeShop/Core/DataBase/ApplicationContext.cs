@@ -17,7 +17,7 @@ namespace TraineeShop.DataBase
             var builder = new ConfigurationBuilder();
              
           var configuration = builder.Build();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=CarShop;Username=postgres;Password=qwerty23");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=zxcasdqwe");
         }
 
 
