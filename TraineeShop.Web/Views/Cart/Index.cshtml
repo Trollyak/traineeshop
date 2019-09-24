@@ -1,0 +1,15 @@
+﻿
+<h1 class="text-center">Корзина</h1>
+@foreach (var item in ViewBag.cart)
+{
+    <p>
+        <div class="active">
+            <div class="text-light"> Название:@item.Car.Name</div>
+            <div class="text-light">Описание: @item.Car.Description</div>
+            <div class="text-light">Стоимость: @item.Car.Price</div>
+            <div class="text-light">Количество:@item.Quantity</div>
+            <div class="text-light"> Общая стоимость:@(item.Quantity* item.Car.Price)</div>
+
+        </div>
+    </p>
+}

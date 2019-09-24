@@ -7,64 +7,17 @@
 
   <ItemGroup>
     <Compile Remove="img\**" />
-    <Compile Remove="Web\Views\Css\**" />
     <Content Remove="img\**" />
-    <Content Remove="Web\Views\Css\**" />
     <EmbeddedResource Remove="img\**" />
-    <EmbeddedResource Remove="Web\Views\Css\**" />
     <None Remove="img\**" />
-    <None Remove="Web\Views\Css\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Web\wwwroot\css\index.css" />
-    <Content Include="Web\wwwroot\favicon.ico" />
-    <Content Include="Web\wwwroot\gelik.jpg" />
-    <Content Include="Web\wwwroot\js\site.js" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
-    <Content Include="Web\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
-    <Content Include="Web\wwwroot\lib\bootstrap\LICENSE" />
-    <Content Include="Web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
-    <Content Include="Web\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Web\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
-    <Content Include="Web\wwwroot\lib\jquery-validation\dist\additional-methods.js" />
-    <Content Include="Web\wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
-    <Content Include="Web\wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
-    <Content Include="Web\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
-    <Content Include="Web\wwwroot\lib\jquery-validation\LICENSE.md" />
-    <Content Include="Web\wwwroot\lib\jquery\dist\jquery.js" />
-    <Content Include="Web\wwwroot\lib\jquery\dist\jquery.min.js" />
-    <Content Include="Web\wwwroot\lib\jquery\dist\jquery.min.map" />
-    <Content Include="Web\wwwroot\lib\jquery\LICENSE.txt" />
-    <Content Include="Web\wwwroot\logoza_ru.png" />
-    <Content Include="Web\wwwroot\niva.jpg" />
-    <Content Include="Web\wwwroot\tesla.jpg" />
   </ItemGroup>
 
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.3.1" />
-    <PackageReference Include="EntityFramework" Version="6.2.0" />
-    <PackageReference Include="FluentValidation" Version="8.4.0" />
-    <PackageReference Include="FluentValidation.AspNetCore" Version="8.4.0" />
+    <PackageReference Include="EntityFramework" Version="6.3.0" />
+    <PackageReference Include="FluentValidation" Version="8.5.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.5.0" />
     <PackageReference Include="linq2db" Version="2.9.0" />
     <PackageReference Include="linq2db.PostgreSQL" Version="2.9.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -73,31 +26,19 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
     <PackageReference Include="ThinkingHome.Migrator.Providers.PostgreSQL" Version="3.0.0" />
   </ItemGroup>
 
 
   <ItemGroup>
+    <ProjectReference Include="..\TraineeShop.Core\TraineeShop.Core.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Compile Update="Core\DataModels\MyDatabase.generated.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>MyDatabase.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <None Update="Core\DataModels\MyDatabase.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MyDatabase.generated.cs</LastGenOutput>
-    </None>
   </ItemGroup>
 
 </Project>
