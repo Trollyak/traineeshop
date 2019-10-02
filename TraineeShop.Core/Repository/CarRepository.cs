@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TraineeShop.Core.DataBase;
@@ -27,10 +28,10 @@ namespace TraineeShop.Core.Repository
             db.SaveChanges();
         }
 
-        public Car Get(Guid id) => db.Cars.Find(id);
+        public Car Get(Guid id) => db.Cars.Include(x => x.Company).ToList<Car>().Find(x=>x.Id==id);
 
 
-        public IEnumerable<Car> GetAll() => db.Cars;
+        public IEnumerable<Car> GetAll() => db.Cars.Include(x => x.Company);
 
         public void Update(Car item)
         {
